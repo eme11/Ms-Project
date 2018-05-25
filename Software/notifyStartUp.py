@@ -9,6 +9,7 @@ date = datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')
 text2 = "\n In the attachment you can find the last saved stream\n"
 body = text + date + text2
 
+#send the streamed video via email
 send_mail_attachment("raspberrypi.camera.project@gmail.com", "PassWord12",
               "emese.mathe.07@gmail.com",
               "Allert Back on",body,'/home/pi/Desktop/stream.h264')

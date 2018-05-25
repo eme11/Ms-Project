@@ -1,3 +1,4 @@
+#it is used for email sending and creatings
 import os
 import sys
 import optparse
@@ -19,6 +20,7 @@ def create_message(user, recipients, subject, body):
     msg.attach(MIMEText(body))
     return msg
 
+#using this function we can attach a file to the email
 def send_mail_attachment(user, password, recipients, subject, body, files):
     msg = create_message(user, recipients, subject, body)
     
@@ -38,6 +40,7 @@ def send_mail_attachment(user, password, recipients, subject, body, files):
     server.close()
     print('Sent email to %s' % (', '.join(recipients)))
 
+#we can inly send text using this function
 def send_mail_simple(user, password, recipients, subject, body):
     msg = create_message(user, recipients, subject, body)
 
